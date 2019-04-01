@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Spec Runner</title>
+</head>
+<body>
+	<p id="texto">TEST</p>
+	<div id="mocha"></div>
+	<script src="../node_modules/expect.js/index.js"></script>
+	<script src="../node_modules/mocha/mocha.js"></script>
+	<script src="../node_modules/happen/happen.js"></script>
+	<script src="../node_modules/prosthetic-hand/dist/prosthetic-hand.js"></script>
+	<script src="../node_modules/sinon/pkg/sinon.js"></script>
+  <script type="text/javascript" src="cdvfile://localhost/assets/www/cordova.js"></script>
+	<!-- source files -->
+	<script>
+		// Trick it into believing we have a touchscreen (for Chrome)
+		if (window.Touch) { window.ontouchstart = function(){} };
+	</script>
+<!-- 	<script src="../build_conf/deps.js"></script> -->
+
+	<script src="../dist/tuproyecto-src.js"></script>
+
+	<script>
+		mocha.setup({
+			ui: 'bdd',
+			ignoreLeaks: true
+		});
+	</script>
+
+	<script src="suites/main.test.js"></script>
+	<script src='suites/util/mifuncion.test.js'></script>
+	<!-- para ejecutar cargando solo este html tenes que poner todos los links aca como el de arriba -->
+	<script>
+		function runTests() {
+			(window.mochaPhantomJS || window.mocha).run();
+		}
+		if (window._cordovaNative) {
+			document.addEventListener('deviceready', runTests, false);
+		}
+		else {
+			runTests();
+		}
+
+	</script>
+</body>
+</html>

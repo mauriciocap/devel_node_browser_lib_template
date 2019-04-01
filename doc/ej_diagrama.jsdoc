@@ -1,0 +1,54 @@
+/**
+
+El nombre que puse abajo va a aparecer en "globals" en el html generado.
+
+Así puedo generar diagramas y explicaciones "sueltos" como parte de la documentación.
+
+Los diagramas pueden ser varios bajo un mismo ```name``` si querés, pero por ahora tienen que estar todos al final del comentario.
+
+Podes usar PlantUML y DITAA
+
+@startuml #
+	header Este es el header de doc/ej_diagrama.jsdoc
+	footer Este es el footer
+
+	title Un diagrama de ejemplo
+	Equipo ->> Vos: necesitamos buena documentación
+	...minutos mas tarde...
+	Vos -> jsdoc : generá todo linkeado con diagramas en html
+	Equipo <<- Vos: está todo en doc/ref/index.html	
+@enduml
+
+
+@startuml #
+ditaa(--no-shadows, scale=0.8)
+
++-----------------------------------------------+
+|Este es un diagrama DITAA                      |
+|o Se dibuja con texto                          |
+|o Podes ver el fuente en doc/ej_diagrama.jsdoc |
++-----------------------------------------------+
+
+/--------\   +-------+
+|cAAA    +---+Version|
+|  Data  |   |   V3  |
+|  Base  |   |cRED{d}|
+|     {s}|   +-------+
+\---+----/
+@enduml
+
+
+@startuml #
+	header Este es el header del segundo doc/ej_diagrama.jsdoc
+	footer Este es el footer
+
+	title Otro diagrama de ejemplo
+	Equipo ->> Vos: necesitamos más documentación
+	...minutos mas tarde...
+	Vos -> jsdoc : generá todo linkeado con diagramas en html
+	Equipo <<- Vos: la agregué, está todo en doc/ref/index.html	
+@enduml
+
+@name Diagramas Copados
+
+*/
