@@ -1,5 +1,7 @@
 # Plantilla para desarrollar una Librería Javascript para el browser usando Node
 
+Con @GalileoCap <https://github.com/galileocap>
+
 Podés copiar y usar de base esta plantilla, que nos resultó cómoda para desarrollar una aplicación bastante compleja que se ejecuta en navegadores y la webview de Apache Córdova.
 
 * Se empaqueta todo en un solo archivo en dist/tuproyecto
